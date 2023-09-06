@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "c3d2ae8f-0df3-46a0-a275-24c84e372b63",
+		"name": "ApiPost",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "registerUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "rashad",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "rashad@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/صور/New folder/20.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/prometPost/public/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"prometPost",
+								"public",
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "rashad@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/prometPost/public/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"prometPost",
+								"public",
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/prometPost/public/api/logout?access_token=vt9S7SASdIEm91Gwx26pWvVgjVn1N3j7zKrJ2aXU6lllAo6WR8RpaboLvrpci3E7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"prometPost",
+								"public",
+								"api",
+								"logout"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "vt9S7SASdIEm91Gwx26pWvVgjVn1N3j7zKrJ2aXU6lllAo6WR8RpaboLvrpci3E7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "getAllPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/prometPost/public/api/?access_token=Dk2N9sZX6MVEAvNP9swgWrVCeJl24KhoVlF6qdlAxVrCWtbhsYhbX6FDZArTrKao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"prometPost",
+								"public",
+								"api",
+								""
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "Dk2N9sZX6MVEAvNP9swgWrVCeJl24KhoVlF6qdlAxVrCWtbhsYhbX6FDZArTrKao"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOnePost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/prometPost/public/api/showpost/6?access_token=Dk2N9sZX6MVEAvNP9swgWrVCeJl24KhoVlF6qdlAxVrCWtbhsYhbX6FDZArTrKao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"prometPost",
+								"public",
+								"api",
+								"showpost",
+								"6"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "Dk2N9sZX6MVEAvNP9swgWrVCeJl24KhoVlF6qdlAxVrCWtbhsYhbX6FDZArTrKao"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "storePost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "desc",
+									"value": "post description 2",
+									"type": "default"
+								},
+								{
+									"key": "negative",
+									"value": "post negative 2",
+									"type": "default"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/صور/4.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/prometPost/public/api/store?access_token=Dk2N9sZX6MVEAvNP9swgWrVCeJl24KhoVlF6qdlAxVrCWtbhsYhbX6FDZArTrKao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"prometPost",
+								"public",
+								"api",
+								"store"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "Dk2N9sZX6MVEAvNP9swgWrVCeJl24KhoVlF6qdlAxVrCWtbhsYhbX6FDZArTrKao"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "desc",
+									"value": "zzzzzzz",
+									"type": "text"
+								},
+								{
+									"key": "negative",
+									"value": "zzzzz",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/prometPost/public/api/update/9?access_token=Hwq1hwBsasgcihKCVdr4E6dxe0q8tZ5wW6DyWNxYenVkcaZrFUj6hIDVWawWCLYu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"prometPost",
+								"public",
+								"api",
+								"update",
+								"9"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "Hwq1hwBsasgcihKCVdr4E6dxe0q8tZ5wW6DyWNxYenVkcaZrFUj6hIDVWawWCLYu"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/prometPost/public/api/delete/6?access_token=Dk2N9sZX6MVEAvNP9swgWrVCeJl24KhoVlF6qdlAxVrCWtbhsYhbX6FDZArTrKao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"prometPost",
+								"public",
+								"api",
+								"delete",
+								"6"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "Dk2N9sZX6MVEAvNP9swgWrVCeJl24KhoVlF6qdlAxVrCWtbhsYhbX6FDZArTrKao"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postlike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/prometPost/public/api/like/9?access_token=Dk2N9sZX6MVEAvNP9swgWrVCeJl24KhoVlF6qdlAxVrCWtbhsYhbX6FDZArTrKao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"prometPost",
+								"public",
+								"api",
+								"like",
+								"9"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "Dk2N9sZX6MVEAvNP9swgWrVCeJl24KhoVlF6qdlAxVrCWtbhsYhbX6FDZArTrKao"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postdislike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/prometPost/public/api/dislike/5?access_token=Dk2N9sZX6MVEAvNP9swgWrVCeJl24KhoVlF6qdlAxVrCWtbhsYhbX6FDZArTrKao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"prometPost",
+								"public",
+								"api",
+								"dislike",
+								"5"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "Dk2N9sZX6MVEAvNP9swgWrVCeJl24KhoVlF6qdlAxVrCWtbhsYhbX6FDZArTrKao"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
